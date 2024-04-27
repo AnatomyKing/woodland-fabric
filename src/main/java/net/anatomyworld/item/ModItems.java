@@ -11,10 +11,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item KINGSEEDS = registerItem("king_seeds", new Item(new FabricItemSettings()));
+    public static final Item KING_SEEDS = registerItem("king_seeds", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(KINGSEEDS);
+        entries.add(KING_SEEDS);
     }
 
     private static Item registerItem(String name, Item item) {
