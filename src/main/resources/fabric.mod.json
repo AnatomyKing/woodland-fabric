@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "woodland",
+	"version": "${version}",
+	"name": "Woodland Metamorphosis",
+	"description": "Every Minecraft creator who has succumbed to the Woodland Metamorphosis",
+	"authors": [
+		"AnatomyKing, Milky"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/woodland/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.anatomyworld.woodland.WoodLand"
+		],
+		"client": [
+			"net.anatomyworld.woodland.WoodLandClient"
+		],
+		"fabric-datagen": [
+			"net.anatomyworld.woodland.WoodLandDataGenerator"
+		]
+	},
+	"mixins": [
+		"woodland.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
