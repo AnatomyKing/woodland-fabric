@@ -1,5 +1,6 @@
 package net.anatomyworld.item;
 
+import net.anatomyworld.block.ModBlocks;
 import net.anatomyworld.woodland.WoodLand;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -15,6 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.woodlandtab"))
                     .icon(() -> new ItemStack(ModItems.KING_SEEDS)).entries((displayContext, entries) -> {
                         entries.add(ModItems.KING_SEEDS);
+                        entries.add(ModBlocks.KING_PLANKS);
 
 
                     }).build());

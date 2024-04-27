@@ -1,5 +1,6 @@
 package net.anatomyworld.woodland;
 
+import net.anatomyworld.block.ModBlocks;
 import net.anatomyworld.item.ModItemGroups;
 import net.anatomyworld.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -16,5 +17,6 @@ public class WoodLand implements ModInitializer {
 
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
