@@ -1,6 +1,6 @@
-package net.anatomyworld.item;
+package net.anatomyworld.woodland.item;
 
-import net.anatomyworld.block.ModBlocks;
+import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.WoodLand;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;

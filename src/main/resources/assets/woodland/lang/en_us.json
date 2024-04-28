@@ -2,6 +2,13 @@
   "item.woodland.king_seeds": "King Seeds",
 
   "block.woodland.king_planks": "King Planks",
+  "block.woodland.king_stairs": "King Stairs",
+  "block.woodland.king_door": "King Planks",
+  "block.woodland.king_fence": "King Fence",
+  "block.woodland.king_fence_gate": "King Fence Gate",
+  "block.woodland.king_slab": "King Slab",
+  "block.woodland.king_button": "King Button",
+  "block.woodland.king_trapdoor": "King Trapdoor",
 
   "itemgroup.woodlandtab": "Woodland Metamorphosis"
 }

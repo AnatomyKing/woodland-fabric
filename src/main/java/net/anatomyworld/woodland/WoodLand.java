@@ -1,8 +1,8 @@
 package net.anatomyworld.woodland;
 
-import net.anatomyworld.block.ModBlocks;
-import net.anatomyworld.item.ModItemGroups;
-import net.anatomyworld.item.ModItems;
+import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.item.ModItemGroups;
+import net.anatomyworld.woodland.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
