@@ -51,7 +51,7 @@ public class ModBlocks {
             new SaplingBlock(new KingSaplingGenerator(),FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
     public static final Block KING_SAPLING_CROP = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_sapling_crop"),
-            new KingCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+            new KingCropBlock(FabricBlockSettings.copyOf(Blocks.TORCHFLOWER_CROP)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

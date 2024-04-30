@@ -5,8 +5,13 @@ import net.anatomyworld.woodland.block.custom.KingCropBlock;
 import net.anatomyworld.woodland.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -38,7 +43,23 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KING_SAPLING_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(KingCropBlock.AGE, 2));
 
-        addDrop(ModBlocks.KING_SAPLING_CROP, cropDrops(ModBlocks.KING_SAPLING_CROP, Item.fromBlock(ModBlocks.KING_SAPLING), ModItems.KING_SEEDS, builder));
+        // Use customCropDrops instead of cropDrops
+        addDrop(ModBlocks.KING_SAPLING_CROP, WoodlandCropDrops(ModBlocks.KING_SAPLING_CROP, Item.fromBlock(ModBlocks.KING_SAPLING), ModItems.KING_SEEDS, builder));
+    }
 
+    // Define customCropDrops method here
+    public LootTable.Builder WoodlandCropDrops(Block crop, Item product, Item seeds, LootCondition.Builder condition) {
+        LootCondition.Builder ageIs2Condition = BlockStatePropertyLootCondition.builder(crop)
+                .properties(StatePredicate.Builder.create().exactMatch(KingCropBlock.AGE, 2));
+
+        return LootTable.builder()
+                .pool(LootPool.builder()
+                        .conditionally(ageIs2Condition)
+                        .with(ItemEntry.builder(product))
+                )
+                .pool(LootPool.builder()
+                        .conditionally(condition.invert())
+                        .with(ItemEntry.builder(seeds))
+                );
     }
 }
