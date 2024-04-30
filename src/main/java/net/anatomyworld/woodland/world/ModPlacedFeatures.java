@@ -15,7 +15,12 @@ import java.util.List;
 public class ModPlacedFeatures {
 
 
+    public static void boostrap(Registerable<PlacedFeature> context) {
+        var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
+
+
+    }
 
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

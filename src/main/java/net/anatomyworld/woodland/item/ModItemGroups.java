@@ -30,6 +30,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_KING_LOG);
                         entries.add(ModBlocks.STRIPPED_KING_WOOD);
 
+                        entries.add(ModBlocks.KING_SAPLING);
+
                     }).build());
 
     public static void registerItemGroups() {
