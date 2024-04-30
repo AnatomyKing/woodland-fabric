@@ -27,6 +27,10 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.KING_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.KING_TRAPDOOR);
+
+        blockStateModelGenerator.registerLog(ModBlocks.KING_LOG).log(ModBlocks.KING_LOG).wood(ModBlocks.KING_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_KING_LOG).log(ModBlocks.STRIPPED_KING_LOG).wood(ModBlocks.STRIPPED_KING_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KING_LEAVES);
     }
 
 

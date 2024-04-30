@@ -3,12 +3,19 @@
 
   "block.woodland.king_planks": "King Planks",
   "block.woodland.king_stairs": "King Stairs",
-  "block.woodland.king_door": "King Planks",
+  "block.woodland.king_door": "King Door",
   "block.woodland.king_fence": "King Fence",
   "block.woodland.king_fence_gate": "King Fence Gate",
   "block.woodland.king_slab": "King Slab",
   "block.woodland.king_button": "King Button",
   "block.woodland.king_trapdoor": "King Trapdoor",
+  "block.woodland.king_pressure_plate": "King Pressure Plate",
+
+  "block.woodland.king_log": "King Log",
+  "block.woodland.king_wood": "King Wood",
+  "block.woodland.stripped_king_log": "Stripped King Log",
+  "block.woodland.stripped_king_wood": "Stripped King Wood",
+  "block.woodland.stripped_king_leaves": "Stripped King Leaves",
 
   "itemgroup.woodlandtab": "Woodland Metamorphosis"
 }

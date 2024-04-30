@@ -17,7 +17,18 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.KING_SEEDS)).entries((displayContext, entries) -> {
                         entries.add(ModItems.KING_SEEDS);
                         entries.add(ModBlocks.KING_PLANKS);
-
+                        entries.add(ModBlocks.KING_STAIRS);
+                        entries.add(ModBlocks.KING_SLAB);
+                        entries.add(ModBlocks.KING_FENCE);
+                        entries.add(ModBlocks.KING_FENCE_GATE);
+                        entries.add(ModBlocks.KING_DOOR);
+                        entries.add(ModBlocks.KING_PRESSURE_PLATE);
+                        entries.add(ModBlocks.KING_BUTTON);
+                        entries.add(ModBlocks.KING_LEAVES);
+                        entries.add(ModBlocks.KING_WOOD);
+                        entries.add(ModBlocks.KING_LOG);
+                        entries.add(ModBlocks.STRIPPED_KING_LOG);
+                        entries.add(ModBlocks.STRIPPED_KING_WOOD);
 
                     }).build());
 
