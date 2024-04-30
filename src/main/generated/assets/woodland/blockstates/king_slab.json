@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodland:block/king_slab"
+    },
+    "type=double": {
+      "model": "woodland:block/king_planks"
+    },
+    "type=top": {
+      "model": "woodland:block/king_slab_top"
+    }
+  }
+}

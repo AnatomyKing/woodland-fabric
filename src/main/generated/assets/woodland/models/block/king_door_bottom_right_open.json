@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "woodland:block/king_door_bottom",
+    "top": "woodland:block/king_door_top"
+  }
+}

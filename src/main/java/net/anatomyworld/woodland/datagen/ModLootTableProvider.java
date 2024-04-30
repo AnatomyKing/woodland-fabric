@@ -1,8 +1,13 @@
 package net.anatomyworld.woodland.datagen;
 
 import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.block.custom.KingCropBlock;
+import net.anatomyworld.woodland.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.item.Item;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
@@ -29,5 +34,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KING_SAPLING);
 
         addDrop(ModBlocks.KING_LEAVES, leavesDrops(ModBlocks.KING_LEAVES, ModBlocks.KING_SAPLING, 0.005f));
+
+        BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KING_SAPLING_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(KingCropBlock.AGE, 2));
+
+        addDrop(ModBlocks.KING_SAPLING_CROP, cropDrops(ModBlocks.KING_SAPLING_CROP, Item.fromBlock(ModBlocks.KING_SAPLING), ModItems.KING_SEEDS, builder));
+
     }
 }

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "woodland:block/king_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "woodland:block/king_wood"
+    },
+    "axis=z": {
+      "model": "woodland:block/king_wood",
+      "x": 90
+    }
+  }
+}

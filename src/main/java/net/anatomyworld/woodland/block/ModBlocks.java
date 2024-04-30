@@ -1,6 +1,7 @@
 package net.anatomyworld.woodland.block;
 
 import net.anatomyworld.woodland.WoodLand;
+import net.anatomyworld.woodland.block.custom.KingCropBlock;
 import net.anatomyworld.woodland.world.tree.KingSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -48,6 +49,9 @@ public class ModBlocks {
 
     public  static final Block KING_SAPLING = registerBlock("king_sapling",
             new SaplingBlock(new KingSaplingGenerator(),FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+
+    public static final Block KING_SAPLING_CROP = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_sapling_crop"),
+            new KingCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

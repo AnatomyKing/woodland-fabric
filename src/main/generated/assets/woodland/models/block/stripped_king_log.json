@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodland:block/stripped_king_log_top",
+    "side": "woodland:block/stripped_king_log"
+  }
+}

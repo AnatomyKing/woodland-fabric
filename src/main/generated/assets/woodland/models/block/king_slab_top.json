@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "woodland:block/king_planks",
+    "side": "woodland:block/king_planks",
+    "top": "woodland:block/king_planks"
+  }
+}

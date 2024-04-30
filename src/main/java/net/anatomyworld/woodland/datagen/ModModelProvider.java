@@ -1,6 +1,7 @@
 package net.anatomyworld.woodland.datagen;
 
 import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.block.custom.KingCropBlock;
 import net.anatomyworld.woodland.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -32,13 +33,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_KING_LOG).log(ModBlocks.STRIPPED_KING_LOG).wood(ModBlocks.STRIPPED_KING_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KING_LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.KING_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+
+        blockStateModelGenerator.registerCrop(ModBlocks.KING_SAPLING_CROP, KingCropBlock.AGE, 0, 1, 2);
     }
 
 
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.KING_SEEDS, Models.GENERATED);
 
     }
 }
