@@ -26,13 +26,13 @@ public class ModConfiguredFeatures {
         register(context, KING_TREE, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.KING_LOG),
                 new KingTrunkPlacer(
-                        7,  // Base height
+                        5,  // Base height
                         2,  // First random height
                         4,  // Second random height
-                        UniformIntProvider.create(1, 3),  // Branch count
-                        UniformIntProvider.create(2, 16),  // Branch horizontal length
-                        UniformIntProvider.create(-16, 0),  // Branch start offset from top
-                        UniformIntProvider.create(-16, 16)  // Branch end offset from top
+                        UniformIntProvider.create(2, 3),  // Branch count
+                        UniformIntProvider.create(2, 4),  // Branch horizontal length
+                        UniformIntProvider.create(-3, 0),  // Branch start offset from top
+                        UniformIntProvider.create(-3, 3)  // Branch end offset from top
                 ),
                 BlockStateProvider.of(ModBlocks.KING_LEAVES),
                 new CherryFoliagePlacer(
