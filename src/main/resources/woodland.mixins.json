@@ -3,7 +3,8 @@
 	"package": "net.anatomyworld.woodland.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"TrunkPlacerTypeMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

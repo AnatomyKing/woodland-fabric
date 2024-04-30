@@ -2,12 +2,10 @@ package net.anatomyworld.woodland.datagen;
 
 import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.block.custom.KingCropBlock;
-import net.anatomyworld.woodland.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -34,8 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KING_LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.KING_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-
-        blockStateModelGenerator.registerCrop(ModBlocks.KING_SAPLING_CROP, KingCropBlock.AGE, 0, 1, 2);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.KING_SAPLING_CROP, BlockStateModelGenerator.TintType.NOT_TINTED, KingCropBlock.AGE, 0, 1, 2);
     }
 
 

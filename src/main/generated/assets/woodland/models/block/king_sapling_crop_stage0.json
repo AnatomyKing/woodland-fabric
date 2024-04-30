@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "woodland:block/king_sapling_crop_stage0"
+    "cross": "woodland:block/king_sapling_crop_stage0"
   }
 }

@@ -43,11 +43,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KING_SAPLING_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(KingCropBlock.AGE, 2));
 
-        // Use customCropDrops instead of cropDrops
+
         addDrop(ModBlocks.KING_SAPLING_CROP, WoodlandCropDrops(ModBlocks.KING_SAPLING_CROP, Item.fromBlock(ModBlocks.KING_SAPLING), ModItems.KING_SEEDS, builder));
     }
 
-    // Define customCropDrops method here
+
     public LootTable.Builder WoodlandCropDrops(Block crop, Item product, Item seeds, LootCondition.Builder condition) {
         LootCondition.Builder ageIs2Condition = BlockStatePropertyLootCondition.builder(crop)
                 .properties(StatePredicate.Builder.create().exactMatch(KingCropBlock.AGE, 2));

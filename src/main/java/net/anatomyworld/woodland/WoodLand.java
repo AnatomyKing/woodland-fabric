@@ -3,7 +3,9 @@ package net.anatomyworld.woodland;
 import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.item.ModItemGroups;
 import net.anatomyworld.woodland.item.ModItems;
+import net.anatomyworld.woodland.util.ModLootTableModifiers;
 import net.anatomyworld.woodland.world.gen.ModWorldGeneration;
+import net.anatomyworld.woodland.world.tree.ModTrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -34,5 +36,7 @@ public class WoodLand implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_LEAVES, 30, 60);
 
 		ModWorldGeneration.generateModWorldGen();
+		ModLootTableModifiers.modifyLootTables();
+		ModTrunkPlacerTypes.register();
 	}
 }
