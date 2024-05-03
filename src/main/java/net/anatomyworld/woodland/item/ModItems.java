@@ -18,11 +18,10 @@ public class ModItems {
         entries.add(KING_SEEDS);
     }
 
-//    public static final Item KING_SIGN = registerItem("king_sign",
-//            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_KING_SIGN, ModBlocks.WALL_KING_SIGN));
-
-//    public static final Item HANGING_KING_SIGN = registerItem("king_hanging_sign",
-//            new HangingSignItem(ModBlocks.HANGING_KING_SIGN, ModBlocks.WALL_HANGING_KING_SIGN, new FabricItemSettings().maxCount(16)));
+    public static final Item KING_SIGN = registerItem("king_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.KING_SIGN, ModBlocks.KING_WALL_SIGN));
+    public static final Item KING_HANGING_SIGN = registerItem("king_hanging_sign",
+            new HangingSignItem(ModBlocks.KING_HANGING_SIGN, ModBlocks.KING_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(WoodLand.MOD_ID, name), item);

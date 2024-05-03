@@ -2,10 +2,15 @@ package net.anatomyworld.woodland;
 
 //import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.block.entity.ModBlockEntities;
+import net.anatomyworld.woodland.util.ModWoodTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
+import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.client.util.SpriteIdentifier;
 
 public class WoodLandClient implements ClientModInitializer {
@@ -18,7 +23,9 @@ public class WoodLandClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.KING_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.KING_SAPLING_CROP, RenderLayer.getCutout());
 
-        //SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,ModBlocks.KING_SIGN_TEXTURE));
-        //SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,ModBlocks.KING_HANGING_SIGN_TEXTURE));
+        BlockEntityRendererFactories.register(ModBlockEntities.MOD_SIGN_BLOCK_ENTITY, SignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.MOD_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
+
+        TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.KING, TexturedRenderLayers.getSignTextureId(ModWoodTypes.KING));
     }
 }

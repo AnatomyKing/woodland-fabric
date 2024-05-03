@@ -1,6 +1,7 @@
 package net.anatomyworld.woodland;
 
 import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.block.entity.ModBlockEntities;
 import net.anatomyworld.woodland.item.ModItemGroups;
 import net.anatomyworld.woodland.item.ModItems;
 import net.anatomyworld.woodland.util.ModLootTableModifiers;
@@ -38,6 +39,7 @@ public class WoodLand implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 		ModLootTableModifiers.modifyLootTables();
 		ModTrunkPlacerTypes.register();
+		ModBlockEntities.registerBlockEntities();
 
 	}
 }
