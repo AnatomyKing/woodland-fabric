@@ -1,5 +1,6 @@
 package net.anatomyworld.woodland;
 
+import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.item.ModItemGroups;
 import net.anatomyworld.woodland.item.ModItems;
@@ -10,6 +11,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.client.render.TexturedRenderLayers;
+import net.minecraft.client.util.SpriteIdentifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,5 +41,8 @@ public class WoodLand implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 		ModLootTableModifiers.modifyLootTables();
 		ModTrunkPlacerTypes.register();
+
+		SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,ModBlocks.KING_SIGN_TEXTURE));
+		SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,ModBlocks.KING_HANGING_SIGN_TEXTURE));
 	}
 }

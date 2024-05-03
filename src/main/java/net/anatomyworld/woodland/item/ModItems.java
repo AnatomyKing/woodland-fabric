@@ -5,9 +5,7 @@ import net.anatomyworld.woodland.block.ModBlocks;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -19,6 +17,12 @@ public class ModItems {
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(KING_SEEDS);
     }
+
+    public static final Item KING_SIGN = registerItem("king_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_KING_SIGN, ModBlocks.WALL_KING_SIGN));
+
+    public static final Item HANGING_KING_SIGN = registerItem("king_hanging_sign",
+            new HangingSignItem(ModBlocks.HANGING_KING_SIGN, ModBlocks.WALL_HANGING_KING_SIGN, new FabricItemSettings().maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(WoodLand.MOD_ID, name), item);
