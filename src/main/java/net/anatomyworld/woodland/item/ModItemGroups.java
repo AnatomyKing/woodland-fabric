@@ -31,8 +31,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_KING_WOOD);
 
                         entries.add(ModBlocks.KING_SAPLING);
-                        entries.add(ModItems.KING_SIGN);
-                        entries.add(ModItems.HANGING_KING_SIGN);
+//                        entries.add(ModItems.KING_SIGN);
+//                        entries.add(ModItems.HANGING_KING_SIGN);
 
 
                     }).build());

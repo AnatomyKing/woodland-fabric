@@ -1,9 +1,9 @@
 package net.anatomyworld.woodland.block;
 
-import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
+//import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
+//import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+//import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
+//import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.anatomyworld.woodland.WoodLand;
 import net.anatomyworld.woodland.block.custom.KingCropBlock;
 import net.anatomyworld.woodland.world.tree.KingSaplingGenerator;
@@ -59,22 +59,22 @@ public class ModBlocks {
     public static final Block KING_SAPLING_CROP = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_sapling_crop"),
             new KingCropBlock(FabricBlockSettings.copyOf(Blocks.TORCHFLOWER_CROP)));
 
-    public static final Identifier KING_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"entity/signs/king");
-    public static final Identifier KING_HANGING_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"entity/signs/hanging/king");
-    public static final Identifier KING_HANGING_GUI_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"textures/gui/hanging_signs/king");
-
-    public static final Block STANDING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_standing_sign"),
-            new TerraformSignBlock(KING_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.OAK_SIGN)));
-    public static final Block WALL_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_sign"),
-            new TerraformWallSignBlock(KING_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN)));
-    public static final Block HANGING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_hanging_sign"),
-            new TerraformHangingSignBlock(KING_HANGING_SIGN_TEXTURE,KING_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
-    public static final Block WALL_HANGING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_hanging_sign"),
-            new TerraformWallHangingSignBlock(KING_HANGING_SIGN_TEXTURE,KING_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
-
-    public static final BlockFamily KING_FAMILY = BlockFamilies.register(ModBlocks.KING_PLANKS)
-            .sign(ModBlocks.STANDING_KING_SIGN,ModBlocks.WALL_KING_SIGN)
-            .group("wooden").unlockCriterionName("has_planks").build();
+//    public static final Identifier KING_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"entity/signs/king");
+//    public static final Identifier KING_HANGING_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"entity/signs/hanging/king");
+//    public static final Identifier KING_HANGING_GUI_SIGN_TEXTURE = new Identifier(WoodLand.MOD_ID,"textures/gui/hanging_signs/king");
+//
+//    public static final Block STANDING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_standing_sign"),
+//            new TerraformSignBlock(KING_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.OAK_SIGN)));
+//    public static final Block WALL_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_sign"),
+//            new TerraformWallSignBlock(KING_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN)));
+//    public static final Block HANGING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_hanging_sign"),
+//            new TerraformHangingSignBlock(KING_HANGING_SIGN_TEXTURE,KING_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
+//    public static final Block WALL_HANGING_KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_hanging_sign"),
+//            new TerraformWallHangingSignBlock(KING_HANGING_SIGN_TEXTURE,KING_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
+//
+//    public static final BlockFamily KING_FAMILY = BlockFamilies.register(ModBlocks.KING_PLANKS)
+//            .sign(ModBlocks.STANDING_KING_SIGN,ModBlocks.WALL_KING_SIGN)
+//            .group("wooden").unlockCriterionName("has_planks").build();
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

@@ -36,15 +36,15 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.KING_SAPLING_CROP, BlockStateModelGenerator.TintType.NOT_TINTED, KingCropBlock.AGE, 0, 1, 2);
 
-        BlockStateModelGenerator.BlockTexturePool king_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KING_PLANKS);
-        king_pool.family(ModBlocks.KING_FAMILY);
+//        BlockStateModelGenerator.BlockTexturePool king_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KING_PLANKS);
+//        king_pool.family(ModBlocks.KING_FAMILY);
     }
 
 
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.HANGING_KING_SIGN, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.HANGING_KING_SIGN, Models.GENERATED);
 
     }
 }
