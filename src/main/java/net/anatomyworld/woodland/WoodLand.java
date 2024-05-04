@@ -2,6 +2,7 @@ package net.anatomyworld.woodland;
 
 import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.block.entity.ModBlockEntities;
+import net.anatomyworld.woodland.entity.ModBoats;
 import net.anatomyworld.woodland.item.ModItemGroups;
 import net.anatomyworld.woodland.item.ModItems;
 import net.anatomyworld.woodland.util.ModLootTableModifiers;
@@ -36,10 +37,16 @@ public class WoodLand implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_LEAVES, 30, 60);
 
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_STAIRS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_FENCE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KING_FENCE_GATE, 5, 20);
+
 		ModWorldGeneration.generateModWorldGen();
 		ModLootTableModifiers.modifyLootTables();
 		ModTrunkPlacerTypes.register();
 		ModBlockEntities.registerBlockEntities();
+		ModBoats.registerBoats();
 
 	}
 }

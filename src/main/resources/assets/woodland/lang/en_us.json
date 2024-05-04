@@ -18,10 +18,8 @@
   "block.woodland.stripped_king_leaves": "Stripped King Leaves",
   "block.woodland.king_sapling": "King Sapling",
 
-  "block.woodland.king_standing_sign": "King Standing Sign",
-  "block.woodland.king_wall_sign": "King Wall Sign",
+  "block.woodland.king_sign": "King Sign",
   "block.woodland.king_hanging_sign": "King Hanging Sign",
-  "block.woodland.king_wall_standing_sign": "King Wall Hanging Sign",
 
 
   "itemgroup.woodlandtab": "Woodland Metamorphosis"

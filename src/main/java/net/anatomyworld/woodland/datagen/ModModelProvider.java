@@ -38,12 +38,16 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_KING_LOG, ModBlocks.KING_HANGING_SIGN, ModBlocks.KING_WALL_HANGING_SIGN);
         blockStateModelGenerator.registerHangingSign(ModBlocks.KING_LOG, ModBlocks.KING_SIGN, ModBlocks.KING_WALL_SIGN);
+
+
     }
 
 
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.KING_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KING_CHEST_BOAT, Models.GENERATED);
 
     }
 }

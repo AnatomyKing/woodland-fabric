@@ -1,7 +1,9 @@
 package net.anatomyworld.woodland.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.anatomyworld.woodland.WoodLand;
 import net.anatomyworld.woodland.block.ModBlocks;
+import net.anatomyworld.woodland.entity.ModBoats;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -22,6 +24,12 @@ public class ModItems {
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.KING_SIGN, ModBlocks.KING_WALL_SIGN));
     public static final Item KING_HANGING_SIGN = registerItem("king_hanging_sign",
             new HangingSignItem(ModBlocks.KING_HANGING_SIGN, ModBlocks.KING_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+
+
+
+    public static final Item KING_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.KING_BOAT_ID,ModBoats.KING_BOAT_KEY, false);
+    public static final Item KING_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.KING_CHEST_BOAT_ID,ModBoats.KING_BOAT_KEY, true);
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(WoodLand.MOD_ID, name), item);

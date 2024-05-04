@@ -1,8 +1,10 @@
 package net.anatomyworld.woodland;
 
 //import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.anatomyworld.woodland.block.ModBlocks;
 import net.anatomyworld.woodland.block.entity.ModBlockEntities;
+import net.anatomyworld.woodland.entity.ModBoats;
 import net.anatomyworld.woodland.util.ModWoodTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -27,5 +29,7 @@ public class WoodLandClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.MOD_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.KING, TexturedRenderLayers.getSignTextureId(ModWoodTypes.KING));
+
+        TerraformBoatClientHelper.registerModelLayers(ModBoats.KING_BOAT_ID, false);
     }
 }

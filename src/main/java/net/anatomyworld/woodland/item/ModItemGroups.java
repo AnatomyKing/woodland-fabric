@@ -34,6 +34,9 @@ public class ModItemGroups {
                         entries.add(ModItems.KING_SIGN);
                         entries.add(ModItems.KING_HANGING_SIGN);
 
+                        entries.add(ModItems.KING_BOAT);
+                        entries.add(ModItems.KING_CHEST_BOAT);
+
 
                     }).build());
 
