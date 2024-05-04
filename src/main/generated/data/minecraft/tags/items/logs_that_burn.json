@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "woodland:king_log",
+    "woodland:king_wood",
+    "woodland:stripped_king_log",
+    "woodland:stripped_king_wood"
+  ]
+}
