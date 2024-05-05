@@ -2,14 +2,14 @@ package net.anatomyworld.woodland.block.custom;
 
 import net.anatomyworld.woodland.block.entity.ModHangingSignBlockEntity;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.WallHangingSignBlock;
+import net.minecraft.block.HangingSignBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 
-public class ModWallHangingSignBlock extends WallHangingSignBlock {
-    public ModWallHangingSignBlock(WoodType woodType,Settings settings) {
-        super(woodType, settings);
+public class ModHangingSignBlock extends HangingSignBlock {
+    public ModHangingSignBlock(Settings settings, WoodType woodType) {
+        super(settings, woodType);
     }
 
     @Override

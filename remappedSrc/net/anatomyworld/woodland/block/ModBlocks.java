@@ -7,7 +7,7 @@ package net.anatomyworld.woodland.block;
 import net.anatomyworld.woodland.WoodLand;
 import net.anatomyworld.woodland.block.custom.*;
 import net.anatomyworld.woodland.util.ModWoodTypes;
-import net.anatomyworld.woodland.world.tree.ModSaplingGenerators;
+import net.anatomyworld.woodland.world.tree.KingSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -25,20 +25,20 @@ public class ModBlocks {
     public  static final Block KING_STAIRS = registerBlock("king_stairs",
             new StairsBlock(ModBlocks.KING_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)));
     public  static final Block KING_BUTTON = registerBlock("king_button",
-            new ButtonBlock(BlockSetType.OAK, 10,FabricBlockSettings.copyOf(Blocks.OAK_BUTTON)));
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
     public  static final Block KING_SLAB = registerBlock("king_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)));
-    public static final Block KING_PRESSURE_PLATE = registerBlock("king_pressure_plate",
-            new PressurePlateBlock(BlockSetType.OAK, // Corrected order
-                    FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE)));
+    public  static final Block KING_PRESSURE_PLATE = registerBlock("king_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
     public  static final Block KING_FENCE = registerBlock("king_fence",
             new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
     public  static final Block KING_FENCE_GATE = registerBlock("king_fence_gate",
-            new FenceGateBlock(WoodType.OAK,FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)));
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WoodType.OAK));
     public  static final Block KING_DOOR = registerBlock("king_door",
-            new DoorBlock(BlockSetType.OAK,FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
     public  static final Block KING_TRAPDOOR = registerBlock("king_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK,FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR)));
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
 
     public  static final Block KING_LOG = registerBlock("king_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
@@ -53,7 +53,7 @@ public class ModBlocks {
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
 
     public  static final Block KING_SAPLING = registerBlock("king_sapling",
-            new SaplingBlock(ModSaplingGenerators.KINGSAP,FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new KingSaplingGenerator(),FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
     public static final Block KING_SAPLING_CROP = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_sapling_crop"),
             new KingCropBlock(FabricBlockSettings.copyOf(Blocks.TORCHFLOWER_CROP)));
@@ -61,11 +61,11 @@ public class ModBlocks {
     public static final Block KING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_sign"),
             new ModSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN), ModWoodTypes.KING));
     public static final Block KING_WALL_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_sign"),
-            new ModWallSignBlock(ModWoodTypes.KING,FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).dropsLike(ModBlocks.KING_SIGN)));
+            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).dropsLike(ModBlocks.KING_SIGN), ModWoodTypes.KING));
     public static final Block KING_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_hanging_sign"),
-            new ModHangingSignBlock(ModWoodTypes.KING,FabricBlockSettings.copyOf(Blocks.OAK_SIGN)));
+            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN), ModWoodTypes.KING));
     public static final Block KING_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(WoodLand.MOD_ID, "king_wall_hanging_sign"),
-            new ModWallHangingSignBlock(ModWoodTypes.KING,FabricBlockSettings.copyOf(Blocks.OAK_SIGN).dropsLike(ModBlocks.KING_HANGING_SIGN)));
+            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).dropsLike(ModBlocks.KING_HANGING_SIGN), ModWoodTypes.KING));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

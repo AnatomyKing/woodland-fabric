@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.resource.featuretoggle.FeatureFlags;
 
 import static net.minecraft.data.family.BlockFamilies.register;
 
@@ -17,7 +16,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        BlockFamily kingFamily = new BlockFamily.Builder(ModBlocks.KING_PLANKS)
+
+        BlockFamily kingFamily = register(ModBlocks.KING_PLANKS)
                 .button(ModBlocks.KING_BUTTON)
                 .fence(ModBlocks.KING_FENCE)
                 .fenceGate(ModBlocks.KING_FENCE_GATE)
@@ -30,11 +30,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .group("wooden")
                 .unlockCriterionName("has_planks")
                 .build();
-
-        generateFamily(exporter, kingFamily, FeatureFlags.VANILLA_FEATURES);
+        generateFamily(exporter, kingFamily);
         offerBarkBlockRecipe(exporter, ModBlocks.KING_WOOD, ModBlocks.KING_LOG);
         offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_KING_WOOD, ModBlocks.STRIPPED_KING_LOG);
         offerBoatRecipe(exporter, ModItems.KING_BOAT, ModBlocks.KING_PLANKS);
         offerHangingSignRecipe(exporter, ModBlocks.KING_HANGING_SIGN, ModBlocks.STRIPPED_KING_LOG);
+
     }
 }
